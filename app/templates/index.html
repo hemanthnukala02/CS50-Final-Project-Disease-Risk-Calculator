@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disease Risk Calculator</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <h2>Assess your risk for various diseases here</h2>
+    <h1>Calculate disease risk</h1>
+    <form method="post">
+        <div>
+            <label for="age">Age:</label>
+            <select id="age" name="age">
+                <option value="" disabled selected>Age Group</option>
+                <option value="18-24">18-24</option>
+                <option value="25-29">25-29</option>
+                <option value="30-34">30-34</option>
+                <option value="35-39">35-39</option>
+                <option value="40-44">40-44</option>
+                <option value="45-49">45-49</option>
+                <option value="50-54">50-54</option>
+                <option value="55-59">55-59</option>
+                <option value="60-64">60-64</option>
+                <option value="65-69">65-69</option>
+                <option value="70-74">70-74</option>
+                <option value="75-79">75-79</option>
+                <option value="80+">80+</option>
+            </select>
+        </div>
+        <div>
+            <label for="gender">Gender:</label>
+            <input type="radio" name="option" value="Male">Male</input>
+            <input type="radio" name="option" value="Female">Female</input>
+        </div>
+        <div>
+            <label for="height">Height (cm):</label>
+            <input type="number" name="height" id="height">
+        </div>
+        <div>
+            <label for="weight">Weight (kg):</label>
+            <input type="number" name="weight" id="weight">
+        </div>
+        <div>
+            <label for="exercise">Exercise:
+                <span id="info-icon">?</span>
+            </label>
+            <input type="radio" name="option" value="yes"> Yes
+            <input type="radio" name="option" value="no"> No 
+        </div>
+        <div id="info-box" style="display: none;">
+            During the past month, other than your regular job, did you participate in any physical activities or exercises?
+        </div>
+        <div>
+            <label for="smokinghist">Smoking History: </label>
+            <input type="radio" name="option" value="yes"> Yes
+            <input type="radio" name="option" value="no"> No 
+        </div>
+        <div>
+            <label for="alcconsumption">Monthly Alcohol Consumption: </label>
+            <select id="alcconsumption" name="alcconsumption">
+                <option value="" disabled selected>Monthly Frequency</option>
+                <option value="0-7">Less than a week</option>
+                <option value="8-14">8-14 days a month</option>
+                <option value="15-21">15-21 days a month</option>
+                <option value="22-30">22-30 days a month</option>
+            </select>
+        </div>
+        <!-- Add more form fields as needed -->
+        <button type="submit">Calculate Risk</button>
+    </form>
+
+    <script>
+        document.getElementById('info-icon').addEventListener('click', function() {
+            var infoBox = document.getElementById('info-box');
+            infoBox.style.display = 'block';
+            setTimeout(function() {
+                infoBox.style.display = 'none';
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
