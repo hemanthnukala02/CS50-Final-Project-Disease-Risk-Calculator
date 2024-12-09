@@ -16,7 +16,7 @@ def index():
         alcconsumption = request.form.get('alcconsumption')
         
 
-        # Error handling
+        # Error handling 
         errors = []
         if not age_input:
             errors.append('Please fill in your age!')

@@ -1,2 +1,6 @@
 __pycache__/
 .DS_store
+*.pkl
+*.h5
+*.pt
+*.joblib
