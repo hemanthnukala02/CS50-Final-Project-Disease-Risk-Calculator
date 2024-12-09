@@ -28,34 +28,61 @@
                 <option value="75-79">75-79</option>
                 <option value="80+">80+</option>
             </select>
+            {% if 'Please fill in your age!' in errors %}
+            <span class="error">{{ 'Please fill in your age!' }}</span>
+            {% endif %}
+            {% if 'Please enter a valid integer for age!' in errors %}
+            <span class="error">{{ 'Please enter a valid integer for age!' }}</span>
+            {% endif %}
         </div>
         <div>
             <label for="gender">Gender:</label>
-            <input type="radio" name="option" value="Male">Male</input>
-            <input type="radio" name="option" value="Female">Female</input>
+            <input type="radio" name="gender" value="Male">Male</input>
+            <input type="radio" name="gender" value="Female">Female</input>
+            {% if 'Please select your gender!' in errors %}
+            <span class="error">{{ 'Please select your gender!' }}</span>
+            {% endif %}
         </div>
         <div>
             <label for="height">Height (cm):</label>
             <input type="number" name="height" id="height">
+            {% if 'Please fill in your height!' in errors %}
+            <span class="error">{{ 'Please fill in your height!' }}</span>
+            {% endif %}
+            {% if 'Please enter a valid number for height!' in errors %}
+            <span class="error">{{ 'Please enter a valid number for height!' }}</span>
+            {% endif %}
         </div>
         <div>
             <label for="weight">Weight (kg):</label>
             <input type="number" name="weight" id="weight">
+            {% if 'Please fill in your weight!' in errors %}
+            <span class="error">{{ 'Please fill in your weight!' }}</span>
+            {% endif %}
+            {% if 'Please enter a valid number for weight!' in errors %}
+            <span class="error">{{ 'Please enter a valid number for weight!' }}</span>
+            {% endif %}
         </div>
         <div>
             <label for="exercise">Exercise:
                 <span id="info-icon">?</span>
             </label>
-            <input type="radio" name="option" value="yes"> Yes
-            <input type="radio" name="option" value="no"> No 
+            <input type="radio" name="exercise" value="yes"> Yes
+            <input type="radio" name="exercise" value="no"> No 
+            {% if 'Please state whether you exercise!' in errors %}
+            <span class="error">{{ 'Please state whether you exercise!' }}</span>
+            {% endif %}
         </div>
         <div id="info-box" style="display: none;">
             During the past month, other than your regular job, did you participate in any physical activities or exercises?
         </div>
         <div>
             <label for="smokinghist">Smoking History: </label>
-            <input type="radio" name="option" value="yes"> Yes
-            <input type="radio" name="option" value="no"> No 
+            <input type="radio" name="smokinghist" value="yes"> Yes
+            <input type="radio" name="smokinghist" value="no"> No 
+            {% if 'Please state if you have smoked before' in errors %}
+            <span class="error">{{ 'Please state if you have smoked before' }}</span>
+            {% endif %}
         </div>
         <div>
             <label for="alcconsumption">Monthly Alcohol Consumption: </label>
@@ -66,6 +93,9 @@
                 <option value="15-21">15-21 days a month</option>
                 <option value="22-30">22-30 days a month</option>
             </select>
+            {% if 'Please state how often you consume alcohol' in errors %}
+            <span class="error">{{ 'Please state how often you consume alcohol' }}</span>
+            {% endif %}
         </div>
         <!-- Add more form fields as needed -->
         <button type="submit">Calculate Risk</button>
