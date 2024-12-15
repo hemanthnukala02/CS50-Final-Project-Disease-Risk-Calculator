@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Disease Risk Results</title>
+</head>
+<body>
+    <h1>Your Disease Risk Results</h1>
+    <ul>
+        {% for disease, risk in predictions.items() %}
+            <p>{{ disease }}: {{ "%.2f"|format(risk) }}%</p>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('main.index') }}">Go Back</a>
+</body>
+</html>

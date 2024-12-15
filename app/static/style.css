@@ -1,3 +1,8 @@
+body{
+    margin: 0;
+    background-color: rgb(228, 228, 228); 
+}
+
 div {
     display: block;
     margin-bottom: 10px;
@@ -20,4 +25,23 @@ div {
     padding: 10px;
     background-color: #f9f9f9;
     position: absolute;
+}
+
+.container{
+    max-width: 350px;
+    margin: 50px auto;
+    margin-left: 300px;
+    padding: 20px;
+    background-color: rgb(245, 245, 245);
+    border-radius: 8px;
+}
+
+.site-header {
+    background-color: #007bff;       /* Background color for the header */
+    color: rgb(228, 228, 228);                    /* Text color */
+    padding: 20px 0;                 /* Vertical padding for spacing */
+    text-align: center;              /* Center the header text */
+    font-size: 1.8em;                /* Adjust font size */
+    border-bottom: 4px solid #0056b3;
+    margin: 0;
 }
