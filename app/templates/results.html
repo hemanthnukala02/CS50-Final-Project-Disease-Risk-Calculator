@@ -3,14 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Disease Risk Results</title>
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unna:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Your Disease Risk Results</h1>
-    <ul>
-        {% for disease, risk in predictions.items() %}
-            <p>{{ disease }}: {{ "%.2f"|format(risk) }}%</p>
-        {% endfor %}
-    </ul>
-    <a href="{{ url_for('main.index') }}">Go Back</a>
+    <h1 class="site-header">Disease Risk Calculator</h1>
+    <div class="container">
+        <h2>Your Disease Risk Results</h2>
+        <ul>
+            {% for disease, risk in predictions.items() %}
+                <p>{{ disease }}: {{ "%.2f"|format(risk) }}%</p>
+            {% endfor %}
+        </ul>
+        <a href="{{ url_for('main.index') }}">Go Back</a>
+    </div>
 </body>
 </html>
