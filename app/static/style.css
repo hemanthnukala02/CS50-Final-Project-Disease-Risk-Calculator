@@ -33,10 +33,10 @@ div {
 .container{
     max-width: 350px;
     margin: 50px auto;
-    margin-left: 300px;
     padding: 20px;
     background-color: rgb(250, 250, 250);
     border-radius: 8px;
+    width: 80%;        
 }
 
 .site-header {
